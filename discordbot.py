@@ -18,7 +18,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('hello')
-    payload = {'message':'test'} # 通知させたいメッセージ
+    payload = {'message':'hello'} # 通知させたいメッセージ
     headers = {'Authorization':'Bearer ' + line_token} # 発行したトークン
     r = requests.post('https://notify-api.line.me/api/notify', data=payload, headers=headers)
 
